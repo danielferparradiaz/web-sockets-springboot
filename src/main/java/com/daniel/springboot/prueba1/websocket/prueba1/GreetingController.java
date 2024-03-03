@@ -8,8 +8,8 @@ import org.springframework.web.util.HtmlUtils;
 @Controller
 public class GreetingController {
 
-    @MessageMapping("/hello")
-    @SendTo("/topic/greetings")
+    @MessageMapping("/api")
+    @SendTo("/sala/sub-sala")
     public Greeting greeting(HelloMessage message) throws InterruptedException{
         return new Greeting("Hello " + HtmlUtils.htmlEscape(message.getName()) + "!");
     }
