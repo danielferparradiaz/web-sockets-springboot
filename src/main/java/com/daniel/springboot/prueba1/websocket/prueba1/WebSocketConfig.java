@@ -18,6 +18,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/socket"); //Endpoint o socket para clientes 
+
+        registry.addEndpoint("/socket").setAllowedOrigins("**"); //Endpoint o socket para clientes 
+        
+        System.out.println("CLIENTE CONECTADO!!!");
+        
     }
 }
